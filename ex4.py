@@ -1,14 +1,15 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
+df = pd.read_csv('dados/dataframe.csv', parse_dates = ['Data'], usecols = list(range(0,6)))
 
-
-
-
-
+print(df.dtypes)
+print(df.head())
 
 
 # Exercício 1 - Qual o valor máximo da coluna Minutos?
-
-
+print(df[5:].max())
 # Exercício 2 - Qual o valor mínimo de distância acima de 2.0?
 
 
