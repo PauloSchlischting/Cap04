@@ -75,6 +75,23 @@ for i in range(0, len(nums)):
     plt.tight_layout()
 #plt.show()
 
+#Analise Bivariada - Mapa de correlação
+corr_df = df[nums].corr()
 
+plt.figure(figsize=(8, 10))
+sns.heatmap(df[nums].corr(), cmap='Blues', annot=True, fmt='.2f')
+#plt.show()
 
+#Pair plot
+#sns.pairplot(df[nums], diag_kind='kde')
+#plt.show()
+
+#Colunas categóricas x variável target
+
+features = cats
+for i in range(0, len(features)):
+    plt.subplot(2, 2, i+1)
+    sns.countplot(data=df, x=features[i], hue='entregue_no_prazo')
+    plt.tight_layout()
+#plt.show()
 
