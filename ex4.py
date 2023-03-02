@@ -9,9 +9,11 @@ print(df.head())
 
 
 # Exercício 1 - Qual o valor máximo da coluna Minutos?
-print(df[5:].max())
-# Exercício 2 - Qual o valor mínimo de distância acima de 2.0?
+print(df['Minutos'].max())
 
+# Exercício 2 - Qual o valor mínimo de distância acima de 2.0?
+df2 = df[df['Distancia']>2]
+print(df2['Distancia'].min())
 
 # Exercício 3 - Crie um plot com a frequência acumulada da coluna Distancia.
 
